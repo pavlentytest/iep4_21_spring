@@ -11,6 +11,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+
+    public User() {
+
+    }
+    public User(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
     private String name;
 
     private Integer age;
@@ -39,4 +48,11 @@ public class User {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                "name:'" + name + '\'' +
+                "age: " + age +
+                '}';
+    }
 }
